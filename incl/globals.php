@@ -4,7 +4,10 @@ class Globals {
   protected $project = "/wijn_winkel";
   
   public $navbar_php = "/navbar.php";
+  public $navmenu_php = "/navmenu.php";
   public $slider_php = "/slider.php";
+  public $highlights_php = "/highlights.php";
+  public $footer_php = "/footer.php";
   
   private $root;
   private $incl = "/incl";
@@ -34,7 +37,12 @@ class Globals {
   
   public function inclScripts() {
     $this->navbar_php = $this->header.$this->navbar_php;
+    $this->navmenu_php = $this->header.$this->navmenu_php;
     $this->slider_php = $this->header.$this->slider_php;
+    
+    $this->highlights_php = $this->content.$this->highlights_php;
+    
+    $this->footer_php = $this->footer.$this->footer_php;
   }
   
   public function locScripts() {
