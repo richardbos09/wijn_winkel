@@ -6,7 +6,10 @@ class Globals {
   public $navbar_php = "/navbar.php";
   public $navmenu_php = "/navmenu.php";
   public $slider_php = "/slider.php";
-  public $highlights_php = "/highlights.php";
+  public $highlight_php = "/highlight.php";
+  public $breadcrumb_php = "/breadcrumb.php";
+  public $company_php = "/company.php";
+  public $contact_php = "/contact.php";
   public $footer_php = "/footer.php";
   
   private $root;
@@ -38,9 +41,12 @@ class Globals {
   public function inclScripts() {
     $this->navbar_php = $this->header.$this->navbar_php;
     $this->navmenu_php = $this->header.$this->navmenu_php;
-    $this->slider_php = $this->header.$this->slider_php;
     
-    $this->highlights_php = $this->content.$this->highlights_php;
+    $this->slider_php = $this->content.$this->slider_php;
+    $this->highlight_php = $this->content.$this->highlight_php;
+    $this->breadcrumb_php = $this->content.$this->breadcrumb_php;
+    $this->company_php = $this->content.$this->company_php;
+    $this->contact_php = $this->content.$this->contact_php;
     
     $this->footer_php = $this->footer.$this->footer_php;
   }

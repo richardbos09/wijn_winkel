@@ -1,0 +1,29 @@
+.top-bar-center {
+  max-width: 75rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.bnr-menu {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.settings > .btn-menu-one {
+  float: right;
+}
+.btn-menu-two {
+  clear: left;
+}
+.orbit {
+  max-width: 75rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.breadcrumbs, .highlights {
+  margin-top: 10px; 
+}
+.comment {
+  height: 100px;
+}
+.submit {
+  width: 100%;
+}

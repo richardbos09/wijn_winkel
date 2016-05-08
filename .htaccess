@@ -1,0 +1,9 @@
+Options -MultiViews 
+ 
+RewriteEngine On 
+ 
+RewriteBase /wijn_winkel/
+ 
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteRule ^(.*)$ index.php?content=$1 [QSA,L]

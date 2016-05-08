@@ -1,6 +1,6 @@
 <!--Highlights-->
 <div class="row column text-center highlights">
-  <h2>Some Other Neat Products</h2>
+  <h2>Aanbevolen producten</h2>
   <hr>
 </div>
 

@@ -11,12 +11,10 @@
   ?>
   
   <link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
   <link href='http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel='stylesheet' type='text/css'>
-  <link href='css/foundation.css' rel='stylesheet' type='text/css'>
-  <link href='css/navbar.css' rel='stylesheet' type='text/css'>
-  <link href='css/navmenu.css' rel='stylesheet' type='text/css'>
-  <link href='css/slider.css' rel='stylesheet' type='text/css'>
-  <link href='css/highlights.css' rel='stylesheet' type='text/css'>
+  <link href='css/style.css' rel='stylesheet' type='text/css'>
+  <link href='css/custom.css' rel='stylesheet' type='text/css'>
   <style>
   
   </style>
@@ -27,10 +25,36 @@
 // Header
 require_once $globals->navbar_php;
 require_once $globals->navmenu_php;
-require_once $globals->slider_php;
 
 // Content
-require_once $globals->highlights_php;
+if(empty($_GET['content'])) {
+  // Default
+  require_once $globals->slider_php;
+  require_once $globals->highlight_php;
+}
+else {
+  switch($_GET['content']) {
+    // Home
+    case 'home':
+      require_once $globals->slider_php;
+      require_once $globals->highlight_php;
+      break;
+    // Bedrijf
+    case 'bedrijf':
+      require_once $globals->breadcrumb_php;
+      require_once $globals->company_php;
+      break;
+    // Contact
+    case 'contact':
+      require_once $globals->breadcrumb_php;
+      require_once $globals->contact_php;
+      break;
+    // Account
+    case 'account':
+      // Empty page
+      break;
+  }
+}
 
 // Footer
 require_once $globals->footer_php;
