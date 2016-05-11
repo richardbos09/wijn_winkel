@@ -2,7 +2,10 @@
 
 class Globals {
   protected $project = "/wijn_winkel";
+  protected $home = "/home";
   
+  public $database_php = "/database.php";
+  public $session_php = "/session.php";
   public $navbar_php = "/navbar.php";
   public $navmenu_php = "/navmenu.php";
   public $slider_php = "/slider.php";
@@ -10,12 +13,15 @@ class Globals {
   public $breadcrumb_php = "/breadcrumb.php";
   public $company_php = "/company.php";
   public $contact_php = "/contact.php";
+  public $signin_php = "/signin.php";
+  public $signout_php = "/signout.php";
   public $footer_php = "/footer.php";
   
   private $root;
   private $incl = "/incl";
   private $header = "/header";
   private $content = "/content";
+  private $account = "/account";
   private $footer = "/footer";
   
   public function __construct() {
@@ -30,7 +36,10 @@ class Globals {
     $this->incl = $this->root.$this->incl;
     
     $this->header = $this->incl.$this->header;
+    
     $this->content = $this->incl.$this->content;
+    $this->account = $this->content.$this->account;
+    
     $this->footer = $this->incl.$this->footer;
   }
   
@@ -39,6 +48,9 @@ class Globals {
   }
   
   public function inclScripts() {
+    $this->database_php = $this->incl.$this->database_php;
+    $this->session_php = $this->incl.$this->session_php;
+    
     $this->navbar_php = $this->header.$this->navbar_php;
     $this->navmenu_php = $this->header.$this->navmenu_php;
     
@@ -47,6 +59,9 @@ class Globals {
     $this->breadcrumb_php = $this->content.$this->breadcrumb_php;
     $this->company_php = $this->content.$this->company_php;
     $this->contact_php = $this->content.$this->contact_php;
+    
+    $this->signin_php = $this->account.$this->signin_php;
+    $thos->signout_php = $this->account.$this->signout_php;
     
     $this->footer_php = $this->footer.$this->footer_php;
   }

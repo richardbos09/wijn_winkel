@@ -1,5 +1,5 @@
-<!--Highlights-->
-<div class="row column text-center highlights">
+<!--Highlight-->
+<div class="row column text-center highlight">
   <h2>Aanbevolen producten</h2>
   <hr>
 </div>

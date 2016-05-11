@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="nl">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -22,6 +22,9 @@
 
 <body>
 <?php
+require_once $globals->database_php;
+require_once $globals->session_php;
+
 // Header
 require_once $globals->navbar_php;
 require_once $globals->navmenu_php;
@@ -51,7 +54,13 @@ else {
       break;
     // Account
     case 'account':
-      // Empty page
+      if(empty($_SESSION['signedin'])) {
+        require_once $globals->signin_php;
+      }
+      break;
+    // Login
+    case 'login':
+      require_once $globals->signin_php;
       break;
   }
 }

@@ -1,4 +1,4 @@
- <!--Company-->
+<!--Contact-->
 <div class="row column text-center contact">
   <h2>Contact</h2>
   <hr>
@@ -52,7 +52,7 @@
           <textarea class="comment" placeholder=""></textarea></label>
       </div>
       <div class="medium-4 columns">
-        <button type="submit" class="button submit">Verzend</button>
+        <button type="submit" class="button cta-submit">Verzend</button>
       </div>
     </form>
   </div>
