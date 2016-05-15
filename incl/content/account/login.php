@@ -115,7 +115,7 @@ $login = new Login();
   <div class="small-6 columns">
     <h4>Nieuw Hier?</h4> <br>
 
-    Registreren is makkelijk en gratis!
+    <i class="lgn-txt-col">Registreren is makkelijk en gratis!</i>
     <ul class="benefits">
       <li>Snelle afrekening</li>
       <li>Meerdere afleveradressen opslaan</li>
@@ -124,6 +124,9 @@ $login = new Login();
     <button type="submit" class="button">Account aanmaken</button>
   </div>
   <div class="small-6 columns vline">
+    <h4>Een vorige keer uw gegevens bewaard?</h4>
+
+    <i class="lgn-txt-col">Als u een account bij ons hebt, log dan in a.u.b.</i>
     <form method="post">
       <div class="row">
         <div class="medium-12 columns">

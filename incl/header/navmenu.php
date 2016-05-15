@@ -7,7 +7,7 @@ class NavMenu {
   }
   
   public function showLogout() {
-    echo "<li><a href='logout'>Uitloggen ()</a></li>";
+    echo "<li><a href='logout'>Uitloggen (".$_SESSION['signedin']['account_username'].")</a></li>";
   }
 }
 
@@ -16,7 +16,7 @@ $navmenu = new NavMenu();
 
 <div class="row bnr-menu">
   <div class="medium-3 columns logo">
-    <a href="home"><img src="img/logo/wijnwinkel_logo.png" alt="logo"></a>
+    <a href="home"><img src="http://placehold.it/450x183&text=LOGO" alt="logo"></a>
   </div>
   <div class="medium-6 columns settings">
     <input type="text" placeholder="Zoek uw wijn">
@@ -27,13 +27,12 @@ $navmenu = new NavMenu();
         <li><a href="registreer">Account aanmaken</a></li>
         <?php
           if(empty($_SESSION['signedin'])) {
-            $this->showLogin();
+            $navmenu->showLogin();
           }
           else {
-            $this->showLogout();
+            $navmenu->showLogout();
           }
         ?>
-        <li><a href="login">Inloggen</a></li>
       </ul>
       <a class="button"><i class="fi-shopping-cart"></i> Winkelwagen</a>
     </div> 
@@ -41,10 +40,10 @@ $navmenu = new NavMenu();
 </div>
 
 <div class="row btn-menu-two">
-  <div class="button-group">
-    <a class="button">Alle producten</a>
-    <a class="button">Rode wijn</a>
-    <a class="button">Witte wijn</a>
-    <a class="button">Rosé wijn</a>
+  <div class="button-group grp-menu">
+    <a class="button btn-width">Alle producten</a>
+    <a class="button btn-width">Rode wijn</a>
+    <a class="button btn-width">Witte wijn</a>
+    <a class="button btn-width">Rosé wijn</a>
   </div>
 </div>

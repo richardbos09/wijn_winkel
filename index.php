@@ -55,12 +55,12 @@ else {
     // Account
     case 'account':
       if(empty($_SESSION['signedin'])) {
-        require_once $globals->signin_php;
+        require_once $globals->login_php;
       }
       break;
     // Login
     case 'login':
-      require_once $globals->signin_php;
+      require_once $globals->login_php;
       break;
   }
 }

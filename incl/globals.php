@@ -13,8 +13,7 @@ class Globals {
   public $breadcrumb_php = "/breadcrumb.php";
   public $company_php = "/company.php";
   public $contact_php = "/contact.php";
-  public $signin_php = "/signin.php";
-  public $signout_php = "/signout.php";
+  public $login_php = "/login.php";
   public $footer_php = "/footer.php";
   
   private $root;
@@ -60,8 +59,7 @@ class Globals {
     $this->company_php = $this->content.$this->company_php;
     $this->contact_php = $this->content.$this->contact_php;
     
-    $this->signin_php = $this->account.$this->signin_php;
-    $thos->signout_php = $this->account.$this->signout_php;
+    $this->login_php = $this->account.$this->login_php;
     
     $this->footer_php = $this->footer.$this->footer_php;
   }

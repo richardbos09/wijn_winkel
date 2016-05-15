@@ -34,7 +34,7 @@
   border-left: 1px solid #cacaca;
 }
 .text-input {
-  width: 75%;
+  max-width: 75%;
 }
 .benefits {
   padding-left: 20px;
@@ -42,4 +42,23 @@
 .dropdown-pane {
   width: 352px;
   list-style-type: none;
+}
+.lgn-txt-col {
+  color: #8e8d8d;
+}
+.grp-menu {
+  min-width: 250px;
+  max-width: 500px;
+}
+.btn-width {
+  width: 25%;
+}
+
+@media screen and (min-width: 360px) and (max-width: 640px){
+  .text-input {
+    max-width: 100%;
+  }
+  .lgn-submit {
+    width: 100%;
+  }
 }
